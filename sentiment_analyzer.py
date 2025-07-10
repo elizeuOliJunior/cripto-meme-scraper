@@ -2,10 +2,8 @@ import pandas as pd
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import nltk
 
-try:
-    nltk.data.find("sentiment/vader_lexicon.zip")
-except nltk.downloader.DownloadError:
-    nltk.download("vader_lexicon")
+# Remove a tentativa de download em tempo de execução e o try-except problemático
+# O download do vader_lexicon será feito via setup_nltk.py durante o build do Railway
 
 def analyze_sentiment(text):
     if not isinstance(text, str):
