@@ -4,3 +4,8 @@ firebase-admin
 schedule
 flask
 python-dotenv
+snscrape
+praw
+pandas
+schedule
+nltk

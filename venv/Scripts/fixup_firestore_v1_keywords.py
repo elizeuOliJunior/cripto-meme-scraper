@@ -1,4 +1,4 @@
-#!C:\Users\Beba\Documents\elizeu\pss\cripto\meme-scraper\venv\Scripts\python.exe
+#!D:\projects\AnaliseMemeCoins\cripto-meme-scraper\venv\Scripts\python.exe
 # -*- coding: utf-8 -*-
 # Copyright 2025 Google LLC
 #
