@@ -2,12 +2,12 @@ import firebase_admin
 from firebase_admin import credentials, db
 import datetime
 import os
-from config import FIREBASE_DB_URL
+
 
 if not firebase_admin._apps:
     cred = credentials.Certificate("serviceAccountKey.json")
     firebase_admin.initialize_app(cred, {
-        "databaseURL": FIREBASE_DB_URL
+        "databaseURL": os.getenv("FIREBASE_DB_URL")
     })
 
 def delete_old_data(ref_path, retention_days):
@@ -15,7 +15,7 @@ def delete_old_data(ref_path, retention_days):
     ref = db.reference(ref_path)
     
     limit_date = datetime.datetime.now() - datetime.timedelta(days=retention_days)
-    limit_timestamp_str = limit_date.strftime("%Y-%m-%dT%H:%M:%S") # Formato ISO para comparação
+    limit_timestamp_str = limit_date.strftime("%Y-%m-%dT%H:%M:%S")
 
     all_data = ref.get()
 
