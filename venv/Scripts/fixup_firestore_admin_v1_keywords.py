@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #!C:\Users\Beba\Documents\elizeu\pss\cripto\meme-scraper\venv\Scripts\python.exe
+=======
+#!D:\projects\AnaliseMemeCoins\cripto-meme-scraper\venv\Scripts\python.exe
+>>>>>>> 779242653e7ac85d144cb0fcf885b87a3fc5e65c
 # -*- coding: utf-8 -*-
 # Copyright 2025 Google LLC
 #

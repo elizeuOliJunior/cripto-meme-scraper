@@ -1,5 +1,9 @@
 # This file must be used with "source bin/activate" *from bash*
+<<<<<<< HEAD
 # You cannot run it directly
+=======
+# you cannot run it directly
+>>>>>>> 779242653e7ac85d144cb0fcf885b87a3fc5e65c
 
 deactivate () {
     # reset old environment variables
@@ -14,9 +18,14 @@ deactivate () {
         unset _OLD_VIRTUAL_PYTHONHOME
     fi
 
+<<<<<<< HEAD
     # Call hash to forget past locations. Without forgetting
     # past locations the $PATH changes we made may not be respected.
     # See "man bash" for more details. hash is usually a builtin of your shell
+=======
+    # Call hash to forget past commands. Without forgetting
+    # past commands the $PATH changes we made may not be respected
+>>>>>>> 779242653e7ac85d144cb0fcf885b87a3fc5e65c
     hash -r 2> /dev/null
 
     if [ -n "${_OLD_VIRTUAL_PS1:-}" ] ; then
@@ -36,6 +45,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
+<<<<<<< HEAD
 # on Windows, a path can contain colons and backslashes and has to be converted:
 case "$(uname)" in
     CYGWIN*|MSYS*|MINGW*)
@@ -57,6 +67,15 @@ export PATH
 VIRTUAL_ENV_PROMPT='(venv) '
 export VIRTUAL_ENV_PROMPT
 
+=======
+VIRTUAL_ENV="D:\projects\AnaliseMemeCoins\cripto-meme-scraper\venv"
+export VIRTUAL_ENV
+
+_OLD_VIRTUAL_PATH="$PATH"
+PATH="$VIRTUAL_ENV/Scripts:$PATH"
+export PATH
+
+>>>>>>> 779242653e7ac85d144cb0fcf885b87a3fc5e65c
 # unset PYTHONHOME if set
 # this will fail if PYTHONHOME is set to the empty string (which is bad anyway)
 # could use `if (set -u; : $PYTHONHOME) ;` in bash
@@ -67,8 +86,15 @@ fi
 
 if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT:-}" ] ; then
     _OLD_VIRTUAL_PS1="${PS1:-}"
+<<<<<<< HEAD
     PS1="("'(venv) '") ${PS1:-}"
     export PS1
+=======
+    PS1="(venv) ${PS1:-}"
+    export PS1
+    VIRTUAL_ENV_PROMPT="(venv) "
+    export VIRTUAL_ENV_PROMPT
+>>>>>>> 779242653e7ac85d144cb0fcf885b87a3fc5e65c
 fi
 
 # Call hash to forget past commands. Without forgetting
