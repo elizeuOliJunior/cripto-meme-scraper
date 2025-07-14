@@ -8,10 +8,10 @@ from config import FIREBASE_DB_URL
 
 # Inicializa o Firebase apenas uma vez
 if not firebase_admin._apps:
-    service_account_key_base64 = os.getenv("FIREBASE_SERVICE_ACCOUNT_KEY_BASE64")
+    service_account_key_base64 = os.getenv("SERVICE_ACCOUNT_KEY_BASE64")
 
     if not service_account_key_base64:
-        raise EnvironmentError("[ERRO] Variável de ambiente FIREBASE_SERVICE_ACCOUNT_KEY_BASE64 não está definida.")
+        raise EnvironmentError("[ERRO] Variável de ambiente SERVICE_ACCOUNT_KEY_BASE64 não está definida.")
 
     try:
         service_account_info = json.loads(
@@ -19,7 +19,7 @@ if not firebase_admin._apps:
         )
         cred = credentials.Certificate(service_account_info)
     except Exception as e:
-        raise ValueError(f"[ERRO] Falha ao decodificar FIREBASE_SERVICE_ACCOUNT_KEY_BASE64: {e}")
+        raise ValueError(f"[ERRO] Falha ao decodificar SERVICE_ACCOUNT_KEY_BASE64: {e}")
 
     firebase_admin.initialize_app(cred, {
         "databaseURL": FIREBASE_DB_URL
