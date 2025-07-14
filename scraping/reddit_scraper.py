@@ -2,11 +2,12 @@ import praw
 import datetime
 from firebase.firebase_client import salvar_dados_reddit
 from sentiment_analyzer import analyze_sentiment
+import os
 
 
-CLIENT_ID = 'AwzM3Q-xhbLXb1o1Jmpu4w'
-CLIENT_SECRET = 'f5Hd9LM1pbQRlR_AD5fNIFJPw06GrA'
-USER_AGENT = 'memeCoinScraper_by_No_Anteater_3453'
+CLIENT_ID = os.getenv("CLIENT_ID_REDDIT")
+CLIENT_SECRET = os.getenv("CLIENT_SECRET_REDDIT")
+USER_AGENT = os.getenv("USER_AGENT_REDDIT")
 
 reddit = praw.Reddit(
     client_id=CLIENT_ID,
